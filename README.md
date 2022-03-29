@@ -19,15 +19,15 @@ dimensions, and their colors, and the program produces an image file canvas with
 Object Design
 
     Square: 
-        X  # X = x-axis
-        Y  # Y = y-axis
+        row # row-axis
+        col # col-axis
         sides # Dimension of the Square
         color
         draw(canvas)
 
     Rectangle:
-        X  # X = x-axis
-        Y  # Y = y-axis
+        row # row-axis
+        col # col-axis
         width
         height
         color
@@ -37,4 +37,8 @@ Object Design
         width
         height
         color
-        
+
+Required Packages
+
+    1. NumPy
+    2. Pillow
