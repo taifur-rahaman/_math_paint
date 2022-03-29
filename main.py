@@ -41,74 +41,81 @@ color_canvas = color()
 
 canvas = Canvas(height_canvas, width_canvas, color_canvas)
 
-# Rectangle
-# Starting Row position of the Rectangle
-while True:
-    try:
-        row_rect = int(input("Enter the starting Row position of the Rectangle: "))
-        break
-    except ValueError:
-        print("Invalid Input")
+print("Which Shape do you want to Create?")
+choice = ""
 
-# Starting Col position of the Rectangle
-while True:
-    try:
-        col_rect = int(input("Enter the starting Column position of the Rectangle: "))
-        break
-    except ValueError:
-        print("Invalid Input")
+while choice != 0:
+    choice = int(input("1. Rectangle\n2. Square\n0. Quit\nEnter your choice: "))
+    if choice == 1:
+        # Rectangle
+        # Starting Row position of the Rectangle
+        while True:
+            try:
+                row_rect = int(input("Enter the starting Row position of the Rectangle: "))
+                break
+            except ValueError:
+                print("Invalid Input")
 
-# Height of the Rectangle
-while True:
-    try:
-        height_rect = int(input("Enter the height of the Rectangle: "))
-        break
-    except ValueError:
-        print("Invalid Input")
+        # Starting Col position of the Rectangle
+        while True:
+            try:
+                col_rect = int(input("Enter the starting Column position of the Rectangle: "))
+                break
+            except ValueError:
+                print("Invalid Input")
 
-# Width of the Rectangle
-while True:
-    try:
-        width_rect = int(input("Enter the width of the Rectangle: "))
-        break
-    except ValueError:
-        print("Invalid Input")
+        # Height of the Rectangle
+        while True:
+            try:
+                height_rect = int(input("Enter the height of the Rectangle: "))
+                break
+            except ValueError:
+                print("Invalid Input")
 
-# Color of the Rectangle
-color_rectangle = color()
+        # Width of the Rectangle
+        while True:
+            try:
+                width_rect = int(input("Enter the width of the Rectangle: "))
+                break
+            except ValueError:
+                print("Invalid Input")
 
-rectangle = Rectangle(row_rect, col_rect, height_rect, width_rect, color_rectangle)
-rectangle.draw(canvas)
+        # Color of the Rectangle
+        color_rectangle = color()
 
-# Square
-# Starting Row position of the Square
-while True:
-    try:
-        row_square = int(input("Enter the starting Row position of the Square: "))
-        break
-    except ValueError:
-        print("Invalid Input")
+        rectangle = Rectangle(row_rect, col_rect, height_rect, width_rect, color_rectangle)
+        rectangle.draw(canvas)
+    elif choice == 2:
+        # Square
+        # Starting Row position of the Square
+        while True:
+            try:
+                row_square = int(input("Enter the starting Row position of the Square: "))
+                break
+            except ValueError:
+                print("Invalid Input")
 
-# Starting Col position of the Square
-while True:
-    try:
-        col_square = int(input("Enter the starting Column position of the Square: "))
-        break
-    except ValueError:
-        print("Invalid Input")
+        # Starting Col position of the Square
+        while True:
+            try:
+                col_square = int(input("Enter the starting Column position of the Square: "))
+                break
+            except ValueError:
+                print("Invalid Input")
 
-# Sides of the Square
-while True:
-    try:
-        side_square = int(input("Enter the sides of the Square: "))
-        break
-    except ValueError:
-        print("Invalid Input")
+        # Sides of the Square
+        while True:
+            try:
+                side_square = int(input("Enter the sides of the Square: "))
+                break
+            except ValueError:
+                print("Invalid Input")
 
-# Color of the Rectangle
-color_square = color()
+        # Color of the Square
+        color_square = color()
 
-square = Square(row_square, color_square, side_square, color_square)
-square.draw(canvas)
-# Canvas Print
-canvas.make("resources/img/canvas.png")
+        square = Square(row_square, col_square, side_square, color_square)
+        square.draw(canvas)
+else:
+    # Canvas Print
+    canvas.make("resources/img/canvas.png")
